@@ -1,0 +1,61 @@
+# Project Plan: AI-Powered Content Repurposing Platform
+
+## Vision & Business Goals
+- Transform long-form content (podcasts, webinars, meetings) into high-quality, personalized derivative content at scale.
+- Provide both written (articles, summaries, show notes) and media assets (video reels, audiograms).
+- Serve content creators, agencies, B2B marketers, and podcast producers.
+- Achieve scalable, profitable SaaS operations with a user-friendly, self-serve platform.
+
+## User Personas
+- **Content Creators:** Individuals producing podcasts, webinars, or video content.
+- **Agencies:** Marketing and content agencies managing multiple clients.
+- **B2B Marketers:** Teams repurposing webinars, meetings, and events for lead generation.
+- **Podcast Producers:** Professionals seeking to scale show notes, summaries, and promotional assets.
+
+## Core Features (MVP)
+- Upload/ingest audio, video, or text content
+- AI-powered transcription (speech-to-text)
+- Summarization and content extraction (articles, show notes, highlights)
+- Media asset generation (video reels, audiograms)
+- User dashboard for managing projects and assets
+- Export/share/download options for all content types
+- User authentication and account management
+
+## Technical Requirements
+- **Frontend:** Modern JS framework (React, Next.js, or similar)
+- **Backend:** Node.js/Express, Python (for AI), or serverless (e.g., AWS Lambda)
+- **AI/ML:** Integrate with or build models for transcription (e.g., Whisper, AssemblyAI), summarization (OpenAI, custom LLM), and media generation (FFmpeg, audiogram libraries)
+- **Storage:** Cloud storage for uploads and generated assets (AWS S3, GCP, etc.)
+- **Database:** Scalable DB for user/projects (PostgreSQL, MongoDB, or managed service)
+- **Authentication:** OAuth, email/password, or third-party (Auth0, Firebase Auth)
+- **Payments:** Stripe or similar for SaaS billing
+- **Integrations:** (Optional for MVP) YouTube, Zoom, Dropbox, Google Drive
+- **Deployment:** CI/CD, Docker, cloud hosting (Vercel, AWS, GCP)
+
+## Project Phases
+1. **Discovery & Design**
+   - User research, requirements gathering
+   - Wireframes, UI/UX design
+2. **MVP Development**
+   - Core backend & frontend setup
+   - AI/ML integration for transcription & summarization
+   - User dashboard, authentication, basic asset management
+3. **Media Asset Generation**
+   - Video reels, audiograms, export features
+4. **Testing & QA**
+   - Automated and manual testing
+   - User feedback loop
+5. **Launch & Iteration**
+   - Deploy MVP, onboard early users
+   - Collect feedback, iterate on features
+6. **Scale & Integrate**
+   - Add integrations, advanced features, optimize for scale
+
+## Success Metrics
+- User growth and retention
+- Content processed per user
+- Conversion to paid plans
+- User satisfaction (NPS, feedback)
+
+---
+See implementation.yaml for detailed implementation steps and progress.yaml for ongoing progress tracking.

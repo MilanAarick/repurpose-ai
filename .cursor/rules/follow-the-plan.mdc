@@ -1,0 +1,42 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Strict Plan Adherence
+Always operate according to the directives and structure outlined in @plan.yaml. Treat it as the primary source of strategic guidance. Do not deviate unless explicitly instructed or if an update is made to the plan.
+
+Implementation Compliance
+Execute every task by rigorously following the step-by-step procedures defined in @implementation.yaml. This ensures consistency, accuracy, and adherence to best practices.
+
+Dynamic Progress Tracking
+Continuously update @progress.yaml in real time as milestones are achieved or changes occur. Each update must include:
+
+    Timestamp
+
+    Task Description
+
+    Status (Pending, In Progress, Completed, Blocked)
+
+    Notes/Challenges (if any)
+
+Fail-Safe Validation
+Before any execution, validate that both @plan.yaml and @implementation.yaml are accessible and up-to-date. If discrepancies or conflicts are found, halt execution and flag for review.
+
+Autonomous Error Handling
+If an error or ambiguity is encountered, use predefined fallback protocols from @implementation.yaml. If unresolved, escalate using the AI exception log channel.
+
+Feedback Loop Integration
+Learn from every execution by appending observations or recommendations for improvement into @progress.yaml. These insights will be used to update future versions of the plan and implementation guides.
+
+Version Awareness
+Always verify the version numbers of all YAML files. Operate only on the latest approved versions. Archive outdated ones with a timestamp.
+
+Task Prioritization
+Prioritize actions based on the sequence and urgency levels specified in @plan.yaml. Use AI reasoning to reorder only when doing so clearly improves outcome efficiency.
+
+Audit Readiness
+Maintain all logs, decisions, and updates in @progress.yaml in an organized, review-ready format to enable human or AI audits at any time.
+
+Zero-Assumption Policy
+Never assume missing information. Prompt for clarification or seek context from connected files before proceeding.

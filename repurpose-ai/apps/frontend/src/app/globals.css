@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+:root {
+  --background: linear-gradient(135deg, #5f779f 0%, #9d8bae 50%, #fcbad3 100%);
+  --foreground: #18181b;
+  --card-bg: #fff;
+  --card-radius: 1.25rem;
+  --card-shadow: 0 4px 24px 0 rgba(80, 80, 180, 0.08);
+  --primary: #4f46e5;
+  --primary-hover: #3730a3;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --font-sans: 'Geist', 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animated grain overlay */
+.grain-bg {
+  background-image: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%50" height="100%50" filter="url(%23noiseFilter)"/></svg>');
+  background-size: cover;
+  animation: grainMove 2s linear infinite;
+}
+
+@keyframes grainMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  margin: 1rem 0;
+  transition: box-shadow 0.2s;
+  color: var(--foreground);
+}
+
+.card:hover {
+  box-shadow: 0 8px 32px 0 rgba(80, 80, 180, 0.16);
+}
+
+input, button {
+  font-family: inherit;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  background: #fff;
+  color: #18181b;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+input::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(80, 80, 180, 0.08);
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:disabled {
+  background: #c7d2fe;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: #52525b;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  color: #18181b;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s;
+}
+
+li:hover {
+  background: #e0e7ff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e0e7ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 4px;
+}
+
+.logo-animated {
+  transition: transform 0.35s cubic-bezier(0.4, 0.2, 0.2, 1);
+  will-change: transform;
+}
+.logo-animated:hover {
+  transform: scale(1.08);
+}
